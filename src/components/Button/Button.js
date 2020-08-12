@@ -16,5 +16,6 @@ outline: none;
     background: white;
     color: red;
     border: .5px solid red;
+    text-decoration: underline;
 }
 `

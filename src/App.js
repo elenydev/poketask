@@ -33,11 +33,13 @@ const Header = styled.h1`
   height: 20vh;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: #CC0000;
   color: white;
   font-weight: bold;
   padding: 15px;
   text-align: center;
+  text-shadow: 2px 1px #3B4CCA; 
+  -webkit-text-stroke: 2px #3B4CCA;
 `
 const Search = styled.form`
 display: flex;

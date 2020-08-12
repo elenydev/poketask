@@ -9,6 +9,7 @@ background-color: white;;
 flex-wrap: wrap;
 padding: 10px 15px;
 transition: 0.2s ease-in;
+box-shadow: 10px -10px 50px 5px #3B4CCA;
     &:hover{
         transform: scale(1.05)
     }

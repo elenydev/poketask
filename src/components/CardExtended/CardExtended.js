@@ -16,6 +16,7 @@ padding: 10px;
 background-color: white;
 margin: 10px auto;
 grid-gap: 15px;
+box-shadow: 10px -10px 50px 5px #3B4CCA;
     @media(max-width: 700px){
         width: 95%;
     }
@@ -60,10 +61,10 @@ align-content: center;
 justify-content: center;
 flex-wrap: wrap;
 padding: 5px;
+margin: 8px 0;
 `
 const PokeType = styled.p`
 display: block;
-padding: 10px 5px;
 font-size: 1.5em;
 `
 const PokeBaseStats = styled.div`
@@ -76,18 +77,18 @@ grid-column: 1 / -1;
 `
 const PokeStats = styled.ul`
 list-style: none;
-display: flex;
-align-content: flex-start;
-justify-content: center;
-flex-wrap: wrap;
 grid-column: 1 / -1;
+display: block;
+width: 100%;
+column-count: 3;
+column-gap: 10px;
+column-rule-style: solid;
+column-rule-width: 1px;
+column-rule-color: black;
+column-width: 100px;
 `
 const PokeStat = styled.li`
-display: flex;
-align-content: flex-start;
-justify-content: center;
-padding: 10px;
-
+text-align: center;
 `
 const CardExtendeed = () => {
 
@@ -118,14 +119,14 @@ const CardExtendeed = () => {
                 <PokeSubheader>Height: {pokemon.height}</PokeSubheader>
                 <PokeSubheader>Experience: {pokemon.base_experience}</PokeSubheader>
             </PokeBaseStats>
+            <PokeSubheader style={{gridColumn: '1 / -1'}}>Stats: </PokeSubheader>
             <PokeStats>
-                <PokeSubheader>Stats: </PokeSubheader>
                 {pokemon.stats.map((stat, key) =>{
                     return <PokeStat key={key}>{stat.stat.name} : {stat.base_stat}</PokeStat>
                 })}
             </PokeStats>
+            <PokeSubheader style={{gridColumn: '1 / -1'}}>Moves: </PokeSubheader>
             <PokeStats>
-                <PokeSubheader>Moves: </PokeSubheader>
                 {pokemon.moves.map((move, key) =>{
                     return <PokeStat key={key}>{move.move.name}</PokeStat>
                 })}
